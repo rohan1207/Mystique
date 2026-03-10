@@ -94,6 +94,9 @@ export default function Footer() {
           <p className="text-[11px] sm:text-xs text-white/70 tracking-[0.16em] uppercase">
             © {new Date().getFullYear()} Nirlovya Atelier · All rights reserved
           </p>
+          <p className="text-[11px] sm:text-xs text-white/80 tracking-[0.16em] uppercase text-center">
+            Designed and Developed by - Markitects
+          </p>
           <div className="flex gap-4 text-[11px] sm:text-xs text-white/70">
             <a href="#" className="hover:text-white transition-colors">
               Instagram
