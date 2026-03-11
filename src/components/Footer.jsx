@@ -53,10 +53,10 @@ export default function Footer() {
 
           <div className="flex flex-col items-start md:items-end gap-2 text-sm">
             <a
-              href="mailto:studio@nirlovya.com"
+              href="mailto:studio@Mystique.com"
               className="text-white hover:text-[#ffe9c7] transition-colors"
             >
-              studio@nirlovya.com
+              studio@Mystique.com
             </a>
             <a
               href="tel:+910000000000"
@@ -92,7 +92,7 @@ export default function Footer() {
         {/* Bottom strip */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-white/25 pt-4">
           <p className="text-[11px] sm:text-xs text-white/70 tracking-[0.16em] uppercase">
-            © {new Date().getFullYear()} Nirlovya Atelier · All rights reserved
+            © {new Date().getFullYear()} Mystique Atelier · All rights reserved
           </p>
           <p className="text-[11px] sm:text-xs text-white/80 tracking-[0.16em] uppercase text-center">
             Designed and Developed by - Markitects

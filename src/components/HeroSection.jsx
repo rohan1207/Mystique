@@ -78,7 +78,7 @@ export default function HeroSection() {
             margin: "0 0 20px",
           }}
         >
-          Nirlovya Furniture Atelier
+          Mystique Furniture Atelier
         </motion.p>
 
         {/* Headline */}

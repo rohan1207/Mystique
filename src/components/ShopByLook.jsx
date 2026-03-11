@@ -10,16 +10,16 @@ const LOOKS = [
     hotspots: [
       {
         id: "sofa",
-        x: "34%",
-        y: "42%",
+        x: "58%",
+        y: "22%",
         name: "Arco Curve Sofa",
         subtitle: "Bouclé · Teal",
         price: "From ₹1,65,000",
       },
       {
         id: "chair",
-        x: "78%",
-        y: "48%",
+        x: "88%",
+        y: "80%",
         name: "Juniper Lounge Chair",
         subtitle: "Twill · Terracotta",
         price: "From ₹89,000",
@@ -27,7 +27,7 @@ const LOOKS = [
       {
         id: "table",
         x: "52%",
-        y: "62%",
+        y: "82%",
         name: "Halo Coffee Table",
         subtitle: "Smoked glass · Brass",
         price: "From ₹74,000",
@@ -35,7 +35,7 @@ const LOOKS = [
       {
         id: "side-table",
         x: "14%",
-        y: "53%",
+        y: "70%",
         name: "Column Side Table",
         subtitle: "Solid brass",
         price: "From ₹48,000",

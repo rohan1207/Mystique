@@ -1,5 +1,5 @@
 /**
- * NirlovyaLogo — Premium SVG wordmark
+ * MystiqueLogo — Premium SVG wordmark
  *
  * Design language:
  *  - Thin-stroke geometric letterforms (~1.4px optical weight at full size)
@@ -10,12 +10,12 @@
  *  - `currentColor` → inherits white on dark, gold or ink on light
  *
  * Usage:
- *   <NirlovyaLogo />                     → 320 × 56, inherits color
- *   <NirlovyaLogo width={200} />         → proportionally scaled
- *   <NirlovyaLogo accent="#c9a96e" />    → custom accent for diamond + rule
- *   <NirlovyaLogo className="text-white" />
+ *   <MystiqueLogo />                     → 320 × 56, inherits color
+ *   <MystiqueLogo width={200} />         → proportionally scaled
+ *   <MystiqueLogo accent="#c9a96e" />    → custom accent for diamond + rule
+ *   <MystiqueLogo className="text-white" />
  */
-export default function NirlovyaLogo({
+export default function MystiqueLogo({
   className = '',
   width = 320,
   height,
@@ -34,7 +34,7 @@ export default function NirlovyaLogo({
       viewBox={`0 0 ${VB_W} ${VB_H}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Nirlovya"
+      aria-label="Mystique"
       role="img"
     >
       {/* ── GRADIENT DEFS for the rule ── */}

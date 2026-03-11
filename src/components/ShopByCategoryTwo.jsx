@@ -77,7 +77,7 @@ const ShopByCategoryTwo = () => {
               Shop by Category
             </h2>
             <p className="text-sm sm:text-base text-[#5b5046] max-w-xl">
-              Explore Nirlovya pieces by the way you live – from low lounge seating
+              Explore Mystique pieces by the way you live – from low lounge seating
               to dining rituals and quietly considered storage.
             </p>
           </div>

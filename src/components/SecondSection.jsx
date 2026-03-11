@@ -77,7 +77,7 @@ const SecondSection = () => {
           >
             <img
               src="/middel1.avif"
-              alt="The NirlovyaResort - Tree House Experience"
+              alt="The MystiqueResort - Tree House Experience"
               className="w-full h-full object-cover rounded-md drop-shadow-2xl"
               loading="lazy"
               decoding="async"
@@ -105,7 +105,7 @@ const SecondSection = () => {
             </h2>
 
             <p className="text-[#5b5046] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 font-light">
-              Nirlovya crafts bespoke, statement furniture where proportion, material, and comfort meet. From singular hero pieces to complete rooms, every design is drawn, prototyped, and finished to suit the way you really live.
+              Mystique crafts bespoke, statement furniture where proportion, material, and comfort meet. From singular hero pieces to complete rooms, every design is drawn, prototyped, and finished to suit the way you really live.
             </p>
 
             {/* CTA row: side-by-side on all screens - premium, clean, neat */}

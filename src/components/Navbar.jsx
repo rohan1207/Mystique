@@ -139,7 +139,7 @@ const Navbar = () => {
                 >
                   <img
                     src={isScrolled ? "/logo.png" : "/logo.png"}
-                    alt="Nirlovya Furniture Atelier"
+                    alt="Mystique Furniture Atelier"
                     className="h-14 lg:h-20 w-auto object-contain"
                   />
                 </motion.div>
