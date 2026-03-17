@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import Architecture from './components/Architecture'
-import ArchitectureHero from './components/Architecturehero'
-import SecondSection from './components/SecondSection'
-import ShopByCollection from './components/ShopByCollection'
-import OurProjects from './components/OurProjects'
-import ShopByCategoryTwo from './components/ShopByCategoryTwo'
-import OurStories from './components/OurStories'
-import ShopByLook from './components/ShopByLook'
-import Territory from './components/Territory'
-import MapSection from './components/MapSection'
 import Footer from './components/Footer'
-import MystiqueBestsellers from './components/MystiqueBestsellers'
+import HomePage from './pages/HomePage'
+import CollectionPage from './pages/CollectionPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 
 export default function App() {
@@ -54,20 +46,13 @@ export default function App() {
     <div className="min-h-screen bg-white text-[#2b2118]">
       <Navbar />
       <main>
-        <HeroSection />
-        <ArchitectureHero />
-        <SecondSection />
-        <ShopByCollection />
-        <ShopByCategoryTwo />
-        <OurProjects />
-        <MystiqueBestsellers />
-        <OurStories />
-        <ShopByLook />
-       
-      
-       
-        <Footer />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/collection/:categorySlug" element={<CollectionPage />} />
+          <Route path="/product/:productId" element={<ProductDetailPage />} />
+        </Routes>
       </main>
+      <Footer />
     </div>
   )
 }

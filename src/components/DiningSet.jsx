@@ -2,30 +2,30 @@ import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-const collections = [
+const items = [
   {
-    name: "Chair",
-    by: "",
-    image: "/product9.jpg",
+    name: "Casey Swivel Dining Chair",
+    by: "Olive",
+    image: "/product3.jpg",
   },
   {
-    name: "Table",
-    by: " ",
-    image: "/product1.jpeg",
+    name: "Emilio Fabric Three-Seater",
+    by: "Blue",
+    image: "/product4.jpg",
   },
   {
-    name: "Sofa",
-    by: " ",
+    name: "Carriba Extendable Dining Table",
+    by: "White Marble",
+    image: "/product12.jpg",
+  },
+  {
+    name: "Bennis Shoe & Console Unit",
+    by: "Dark Walnut",
     image: "/product13.jpg",
-  },
-  {
-    name: "Dining Set",
-    by: "",
-    image: "/product10.jpg",
   },
 ];
 
-const ShopByCollection = () => {
+const DinigSet = () => {
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
   const onMouseMove = useCallback((e) => {
@@ -50,19 +50,18 @@ const ShopByCollection = () => {
       }}
     >
       <div className="max-w-7xl mx-auto">
-        <header className="mb-10 lg:mb-14">
-          <p
-            className="uppercase text-neutral-500 mb-4"
-            style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
-          >
-            Shop by collection
-          </p>
-          <p
-            className="text-neutral-800 max-w-lg"
-            style={{ fontSize: "clamp(22px, 2.8vw, 34px)", fontWeight: 200, letterSpacing: "-0.02em", lineHeight: 1.2 }}
-          >
-            Curated families of pieces that live beautifully together.
-          </p>
+        <header className="mb-10 lg:mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <h2 className="text-[11px] tracking-[0.28em] uppercase text-neutral-600 mb-2">
+              Mystique Bestsellers
+            </h2>
+            <p className="text-sm lg:text-base text-neutral-700 max-w-xl tracking-[0.02em]">
+              Our most loved pieces, chosen for lasting quality and timeless design.
+            </p>
+          </div>
+          <button className="text-[11px] tracking-[0.18em] uppercase text-neutral-600 hover:text-neutral-900 transition-colors shrink-0">
+            View All
+          </button>
         </header>
 
         <div
@@ -82,11 +81,8 @@ const ShopByCollection = () => {
               }`}
               style={{ backgroundColor: "#b8956e" }}
             >
-              <span
-                className="px-5 py-2.5 text-white"
-                style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.18em" }}
-              >
-                VIEW
+              <span className="px-5 py-2.5 text-white font-semibold text-sm tracking-wide">
+                View
               </span>
               <span className="flex items-center justify-center w-10 h-10 bg-white text-neutral-900 rounded-full">
                 <ArrowUpRight size={18} strokeWidth={2.5} />
@@ -94,7 +90,7 @@ const ShopByCollection = () => {
             </div>
           </div>
 
-          {collections.map((item, index) => (
+          {items.map((item, index) => (
             <motion.article
               key={item.name}
               initial={{ opacity: 0, y: 24 }}
@@ -103,7 +99,7 @@ const ShopByCollection = () => {
               transition={{ duration: 0.6, delay: index * 0.08, ease: [0.19, 1, 0.22, 1] }}
               className="group cursor-pointer"
               whileHover={{ y: -6 }}
-              // transition={{ type: "tween", duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
+              transition={{ type: "tween", duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
               onMouseEnter={onCardEnter}
               onMouseLeave={onCardLeave}
             >
@@ -122,12 +118,12 @@ const ShopByCollection = () => {
                 />
               </div>
 
-              <div className="pt-4 pb-2">
-                <p
-                  className="uppercase text-neutral-900"
-                  style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
-                >
+              <div className="pt-5 pb-2 text-center">
+                <p className="text-sm lg:text-base font-semibold tracking-[0.18em] uppercase text-neutral-900">
                   {item.name}
+                </p>
+                <p className="text-xs lg:text-sm tracking-[0.16em] uppercase text-neutral-700 mt-0.5">
+                  {item.by} /
                 </p>
               </div>
             </motion.article>
@@ -138,4 +134,4 @@ const ShopByCollection = () => {
   );
 };
 
-export default ShopByCollection;
+export default DinigSet;

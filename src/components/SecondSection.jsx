@@ -59,7 +59,7 @@ const SecondSection = () => {
         viewport={{ once: true }}
         style={{ letterSpacing: "0.1em" }}
       >
-        MYSTIQUE
+        T-REX
       </motion.div>
 
       {/* Main Layout Container - reduced vertical padding to avoid excess blank space */}

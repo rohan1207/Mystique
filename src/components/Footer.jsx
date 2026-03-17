@@ -1,112 +1,100 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
-      className="w-full border-t border-[#e0d2c0] px-4 sm:px-10 py-8 sm:py-10"
+      className="w-full bg-[#f8f7f5]"
       style={{
-        fontFamily: "'Georgia', 'Times New Roman', serif",
-        background: "linear-gradient(135deg, #c59a6a 0%, #b17b4c 35%, #9b6640 100%)",
-        color: "#fff",
+        fontFamily:
+          "system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
       }}
     >
-      <div className="max-w-7xl mx-auto flex flex-col gap-8">
-        {/* Top row */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
-            <p
-              style={{
-                fontFamily: "'Georgia', serif",
-                fontWeight: 300,
-                fontSize: "clamp(20px, 2.4vw, 26px)",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.9)",
-                margin: 0,
-              }}
-            >
-              Mystique Furnishing Company
-            </p>
-            <p
-              style={{
-                fontFamily: "'Georgia', serif",
-                fontWeight: 400,
-                fontSize: "clamp(13px, 1.05vw, 15px)",
-                letterSpacing: "0.03em",
-                color: "rgba(255,255,255,0.85)",
-                lineHeight: 1.7,
-                maxWidth: "34rem",
-                marginTop: "0.9rem",
-              }}
-            >
-              The Art of Bespoke Living.
-              <br />
+      <div className="max-w-6xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
+        {/* Main block */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-14 border-b border-neutral-200">
+          <div className="md:col-span-5">
+            <Link to="/" className="inline-block">
+              <span className="text-lg tracking-[0.35em] uppercase font-semibold text-neutral-900">
+                MYSTIQUE
+              </span>
+            </Link>
+            <p className="mt-4 text-sm text-neutral-600 leading-relaxed max-w-sm tracking-[0.02em]">
               An atelier for custom-made furniture. Thoughtfully crafted for modern homes.
-              <br />
-              Enquiries via DM!
-            </p>
-            <p
-              className="mt-2 text-[11px] sm:text-xs tracking-[0.18em] uppercase"
-              style={{ color: "rgba(255,255,255,0.8)" }}
-            >
-              Mystique Furnishing Company, Bhopal, Madhya Pradesh 462001
             </p>
           </div>
 
-          <div className="flex flex-col items-start md:items-end gap-2 text-sm">
+          <div className="md:col-span-3">
+            <p className="text-[10px] tracking-[0.28em] uppercase text-neutral-500 mb-4">
+              Navigate
+            </p>
+            <nav className="flex flex-col gap-3">
+              <Link to="/" className="text-sm tracking-[0.18em] uppercase text-neutral-700 hover:text-neutral-900 transition-colors">
+                Home
+              </Link>
+              <Link to="/collections" className="text-sm tracking-[0.18em] uppercase text-neutral-700 hover:text-neutral-900 transition-colors">
+                Collections
+              </Link>
+              <Link to="/bespoke" className="text-sm tracking-[0.18em] uppercase text-neutral-700 hover:text-neutral-900 transition-colors">
+                Bespoke
+              </Link>
+              <Link to="/studio" className="text-sm tracking-[0.18em] uppercase text-neutral-700 hover:text-neutral-900 transition-colors">
+                Studio
+              </Link>
+              <Link to="/contact" className="text-sm tracking-[0.18em] uppercase text-neutral-700 hover:text-neutral-900 transition-colors">
+                Contact
+              </Link>
+            </nav>
+          </div>
+
+          <div className="md:col-span-4">
+            <p className="text-[10px] tracking-[0.28em] uppercase text-neutral-500 mb-4">
+              Enquiries
+            </p>
             <a
-              href="mailto:studio@Mystique.com"
-              className="text-white hover:text-[#ffe9c7] transition-colors"
+              href="mailto:hello@mystiqueatelier.com"
+              className="block text-sm tracking-[0.12em] text-neutral-800 hover:text-neutral-600 transition-colors"
             >
-              studio@Mystique.com
+              hello@mystiqueatelier.com
             </a>
             <a
               href="tel:+910000000000"
-              className="text-white hover:text-[#ffe9c7] tracking-[0.16em] uppercase text-[11px]"
+              className="mt-2 block text-xs tracking-[0.2em] uppercase text-neutral-600 hover:text-neutral-800 transition-colors"
             >
               +91 · 00000 · 00000
             </a>
-            <p className="text-[11px] tracking-[0.18em] uppercase mt-2 text-white/80">
-              Bhopal · Madhya Pradesh
+            <p className="mt-4 text-[11px] tracking-[0.16em] uppercase text-neutral-500">
+              Bhopal, Madhya Pradesh
             </p>
           </div>
         </div>
 
-        {/* Middle links row */}
-        <div className="flex flex-wrap gap-4 sm:gap-6 text-[11px] sm:text-xs tracking-[0.18em] uppercase text-white/75">
-          <a href="#collections" className="hover:text-white transition-colors">
-            Collections
-          </a>
-          <a href="#projects" className="hover:text-white transition-colors">
-            Projects
-          </a>
-          <a href="#stories" className="hover:text_white transition-colors">
-            Stories
-          </a>
-          <a href="#studio" className="hover:text_white transition-colors">
-            Studio
-          </a>
-          <a href="#contact" className="hover:text_white transition-colors">
-            Contact
-          </a>
-        </div>
-
-        {/* Bottom strip */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-white/25 pt-4">
-          <p className="text-[11px] sm:text-xs text-white/70 tracking-[0.16em] uppercase">
-            © {new Date().getFullYear()} Mystique Atelier · All rights reserved
+        {/* Bottom bar */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6">
+          <p className="text-[10px] tracking-[0.2em] uppercase text-neutral-500">
+            © {currentYear} Mystique. All rights reserved.
           </p>
-          <p className="text-[11px] sm:text-xs text-white/80 tracking-[0.16em] uppercase text-center">
-            Designed and Developed by - Markitects
-          </p>
-          <div className="flex gap-4 text-[11px] sm:text-xs text-white/70">
-            <a href="#" className="hover:text-white transition-colors">
+          <div className="flex gap-8">
+            <a
+              href="#"
+              className="text-[10px] tracking-[0.2em] uppercase text-neutral-500 hover:text-neutral-800 transition-colors"
+            >
               Instagram
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-[10px] tracking-[0.2em] uppercase text-neutral-500 hover:text-neutral-800 transition-colors"
+            >
               Pinterest
             </a>
           </div>
         </div>
+        <p className="text-[10px] tracking-[0.18em] uppercase text-neutral-400 mt-4 text-center sm:text-left">
+          Designed by Markitects
+        </p>
       </div>
     </footer>
-  )
+  );
 }
