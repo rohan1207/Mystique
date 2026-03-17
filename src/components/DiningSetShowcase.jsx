@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const BULLETS = [
@@ -19,57 +18,27 @@ const BENTO_ITEMS = [
 ];
 
 export default function DiningSetShowcase() {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Heading: fades in early
-  const headingOpacity = useTransform(scrollYProgress, [0.15, 0.35], [0, 1]);
-  const headingY = useTransform(scrollYProgress, [0.15, 0.35], [24, 0]);
-
-  // Bullets: parallax reveal one by one
-  const b1 = useTransform(scrollYProgress, [0.25, 0.42], [0, 1]);
-  const b1Y = useTransform(scrollYProgress, [0.25, 0.42], [20, 0]);
-  const b2 = useTransform(scrollYProgress, [0.38, 0.55], [0, 1]);
-  const b2Y = useTransform(scrollYProgress, [0.38, 0.55], [20, 0]);
-  const b3 = useTransform(scrollYProgress, [0.51, 0.68], [0, 1]);
-  const b3Y = useTransform(scrollYProgress, [0.51, 0.68], [20, 0]);
-  const b4 = useTransform(scrollYProgress, [0.64, 0.82], [0, 1]);
-  const b4Y = useTransform(scrollYProgress, [0.64, 0.82], [20, 0]);
-
-  const bulletData = [
-    { opacity: b1, y: b1Y },
-    { opacity: b2, y: b2Y },
-    { opacity: b3, y: b3Y },
-    { opacity: b4, y: b4Y },
-  ];
-
   return (
     <section
-      ref={sectionRef}
       className="relative bg-[#fafaf9]"
       style={{
         fontFamily:
           "system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
       }}
     >
-      <div className="h-[280vh] relative">
+      <div className="h-[160vh] relative">
         <div className="sticky top-0 h-screen w-full flex items-stretch overflow-hidden">
           <div className="w-full flex flex-col lg:flex-row gap-0 max-w-[1600px] mx-auto">
-            {/* Left: text – narrower, shifted left */}
+            {/* Left: text – static, no scroll reveal */}
             <div className="w-full lg:w-[30%] xl:w-[28%] flex flex-col justify-center pl-6 lg:pl-12 xl:pl-20 pr-4 lg:pr-8 py-16 lg:py-0">
-              <motion.p
-                style={{ opacity: headingOpacity, fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
+              <p
+                style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
                 className="uppercase text-neutral-500 mb-5"
               >
                 Mystique
-              </motion.p>
-              <motion.h2
+              </p>
+              <h2
                 style={{
-                  opacity: headingOpacity,
-                  y: headingY,
                   fontWeight: 200,
                   fontSize: "clamp(32px, 3.5vw, 52px)",
                   letterSpacing: "-0.025em",
@@ -78,41 +47,56 @@ export default function DiningSetShowcase() {
                 className="text-neutral-900 mb-10 lg:mb-14"
               >
                 Our Dining Set
-              </motion.h2>
-              <ul className="space-y-6 lg:space-y-8">
+              </h2>
+              <ul className="space-y-5 lg:space-y-7">
                 {BULLETS.map((text, i) => (
-                  <motion.li
+                  <li
                     key={i}
-                    style={{ opacity: bulletData[i].opacity, y: bulletData[i].y }}
                     className="flex items-start gap-3 leading-relaxed"
                   >
-                    <span className="mt-[6px] w-1 h-1 rounded-full bg-neutral-300 shrink-0" />
-                    <span style={{ fontSize: "15px", fontWeight: 300, letterSpacing: "0.01em", lineHeight: 1.75 }} className="text-neutral-700">
+                    <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-400 shrink-0" />
+                    <span
+                      style={{
+                        fontSize: "16px",
+                        fontWeight: 300,
+                        letterSpacing: "0.01em",
+                        lineHeight: 1.8,
+                      }}
+                      className="text-neutral-800"
+                    >
                       {text}
                     </span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
 
-              <motion.div style={{ opacity: b4 }} className="mt-10 lg:mt-14">
+              <div className="mt-10 lg:mt-12">
                 <Link
                   to="/collection/dining-sets"
                   className="group inline-flex items-center gap-3"
                   style={{
-                    fontSize: "11px", fontWeight: 400,
-                    letterSpacing: "0.18em", textTransform: "uppercase",
-                    color: "inherit", textDecoration: "none",
+                    fontSize: "12px",
+                    fontWeight: 400,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    color: "inherit",
+                    textDecoration: "none",
                   }}
                 >
                   <span
                     className="group-hover:border-neutral-900 transition-colors duration-300"
-                    style={{ borderBottom: "1px solid rgba(0,0,0,0.35)", paddingBottom: "2px" }}
+                    style={{
+                      borderBottom: "1px solid rgba(0,0,0,0.6)",
+                      paddingBottom: "3px",
+                    }}
                   >
                     Shop Now
                   </span>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1 text-xs">→</span>
+                  <span className="transition-transform duration-300 group-hover:translate-x-1 text-sm">
+                    →
+                  </span>
                 </Link>
-              </motion.div>
+              </div>
             </div>
 
             {/* Right: bento grid – 3-card premium layout */}

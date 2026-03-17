@@ -42,15 +42,15 @@ const ShopByCollection = () => {
 
   return (
     <section
-      className="w-full py-16 lg:py-24 px-4 sm:px-6 lg:px-10"
+      className="w-full py-16 lg:py-24 px-4 sm:px-6 lg:px-10 xl:px-20"
       style={{
         backgroundColor: "white",
         fontFamily:
           "system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
       }}
     >
-      <div className="max-w-7xl mx-auto">
-        <header className="mb-10 lg:mb-14">
+      <div className="max-w-[1600px] mx-auto">
+        <header className="mb-10 lg:mb-14 xl:mb-16">
           <p
             className="uppercase text-neutral-500 mb-4"
             style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
@@ -58,15 +58,15 @@ const ShopByCollection = () => {
             Shop by collection
           </p>
           <p
-            className="text-neutral-800 max-w-lg"
-            style={{ fontSize: "clamp(22px, 2.8vw, 34px)", fontWeight: 200, letterSpacing: "-0.02em", lineHeight: 1.2 }}
+            className="text-neutral-800 max-w-xl xl:max-w-2xl"
+            style={{ fontSize: "clamp(22px, 2.4vw, 40px)", fontWeight: 200, letterSpacing: "-0.02em", lineHeight: 1.18 }}
           >
             Curated families of pieces that live beautifully together.
           </p>
         </header>
 
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 ${cursor.visible ? "cursor-none" : ""}`}
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 ${cursor.visible ? "cursor-none" : ""}`}
           onMouseMove={onMouseMove}
         >
           {/* Custom cursor – View pill sticky to pointer when over a card */}

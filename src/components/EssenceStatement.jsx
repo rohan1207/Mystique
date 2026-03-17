@@ -10,7 +10,7 @@ export default function EssenceStatement() {
           "system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
       }}
     >
-      <div className="max-w-4xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
+      <div className="max-w-4xl 2xl:max-w-5xl mx-auto px-6 lg:px-10 2xl:px-16 py-20 lg:py-28 2xl:py-32">
         <motion.p
           initial={{ opacity: 0, y: 32, filter: "blur(12px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -20,7 +20,7 @@ export default function EssenceStatement() {
             duration: 1.1,
             ease: [0.19, 1, 0.22, 1],
           }}
-          className="text-center text-xl leading-relaxed text-neutral-900 lg:text-5xl"
+          className="text-center text-xl leading-relaxed text-neutral-900 lg:text-5xl 2xl:text-[56px]"
           style={{
             letterSpacing: "-0.02em",
             fontWeight: 200,

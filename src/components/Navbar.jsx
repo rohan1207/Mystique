@@ -137,8 +137,8 @@ const Navbar = () => {
           fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
         }}
       >
-        <nav className="max-w-6xl mx-auto px-5 lg:px-10">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <nav className="max-w-[1600px] mx-auto px-5 lg:px-10 2xl:px-16">
+          <div className="flex items-center justify-between h-16 lg:h-20 2xl:h-24">
             {/* Left: menu items only */}
             <div className="hidden md:flex items-center gap-8 lg:gap-10">
               {[

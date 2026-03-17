@@ -29,7 +29,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content — bottom left */}
-      <div className="relative h-full flex flex-col justify-end px-8 lg:px-16 pb-14 lg:pb-20">
+      <div className="relative h-full flex flex-col justify-end px-8 lg:px-16 2xl:px-28 pb-14 lg:pb-20 2xl:pb-24 max-w-[1600px] mx-auto">
 
         {/* Eyebrow label */}
         <p
