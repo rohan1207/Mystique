@@ -14,8 +14,25 @@ const ClientStory = () => {
         className="w-full lg:w-[38%] flex flex-col justify-center px-6 sm:px-10 lg:px-14 py-16 lg:py-24"
         style={{ backgroundColor: "#F8F5F1" }}
       >
+        <p
+          className="uppercase text-neutral-500 mb-4"
+          style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
+        >
+          Client story
+        </p>
+        <h2
+          className="text-neutral-900 mb-8"
+          style={{
+            fontWeight: 200,
+            fontSize: "clamp(24px, 2.4vw, 32px)",
+            letterSpacing: "-0.02em",
+            lineHeight: 1.25,
+          }}
+        >
+          From sketch to finished piece.
+        </h2>
         <p className="text-sm lg:text-base text-neutral-800 leading-relaxed max-w-md mb-10">
-          The satisfaction of our customers is our main priority. Let our experience and feedback convince you.
+          One brief, one object, two perspectives. How a challenging chair sketch from a client became a finished piece that felt exactly like theirs.
         </p>
 
         <div className="space-y-8">

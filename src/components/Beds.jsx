@@ -9,12 +9,12 @@ const BULLETS = [
 ];
 
 const BENTO_ITEMS = [
-  { image: "/bed.avif", alt: "Bed setting" },
-  { image: "/product9.jpg", alt: "Bed detail" },
-  { image: "/product10.jpg", alt: "Bedroom" },
-  { image: "/product12.jpg", alt: "Frame" },
-  { image: "/product13.jpg", alt: "Headboard" },
-  { image: "/product4.jpg", alt: "Detail" },
+  { image: "/bed4.webp", alt: "Bed setting" },
+  { image: "/bed5.webp", alt: "Bed detail" },
+  { image: "/bed7.webp", alt: "Bedroom" },
+  { image: "/bed7.webp", alt: "Frame" },
+  { image: "/bed8.webp", alt: "Headboard" },
+  { image: "/bed9.webp", alt: "Detail" },
 ];
 
 export default function Beds() {

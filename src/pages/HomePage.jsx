@@ -28,7 +28,7 @@ export default function HomePage() {
       <Beds />
       <Tables />
       <Chairs />
-      <Consoles />
+      {/* <Consoles /> */}
       <Sofas />
       <ClientStory />
     </>

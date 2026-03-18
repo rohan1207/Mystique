@@ -59,8 +59,22 @@ export default function StudioScrollReveal() {
                 style={{ opacity: textOpacity, fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
                 className="uppercase text-neutral-500"
               >
-                Mystique Studio
+                About us
               </motion.p>
+
+              {/* Heading */}
+              <motion.h2
+                style={{
+                  opacity: textOpacity,
+                  fontSize: "clamp(26px, 2.6vw, 38px)",
+                  fontWeight: 200,
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.15,
+                }}
+                className="text-neutral-900"
+              >
+                A studio for quietly expressive furniture.
+              </motion.h2>
 
               {/* Main copy */}
               <motion.p
@@ -73,7 +87,7 @@ export default function StudioScrollReveal() {
                 }}
                 className="text-neutral-900"
               >
-                A contemporary furniture and objects atelier with a portfolio spanning tailored residences, intimate hospitality destinations, and quietly expressive commercial spaces.
+                Mystique works at the scale of rooms and the scale of objects — designing furniture, lighting and storage that sit quietly in a space while holding it together.
               </motion.p>
 
               {/* Thin rule */}
@@ -92,8 +106,38 @@ export default function StudioScrollReveal() {
                 }}
                 className="text-neutral-500"
               >
-                Founded to create objects and environments that feel rare, reassuringly simple, and lastingly warm.
+                Every piece begins as a conversation around how you live: morning rituals, evening light, the way you move through a room. From there we sketch, prototype and refine until the object feels inevitable.
               </motion.p>
+
+              {/* CTA */}
+              <motion.div style={{ opacity: textOpacity }} className="pt-4">
+                <button
+                  className="group inline-flex items-center gap-2 text-neutral-900 hover:text-neutral-600 transition-colors duration-300"
+                  style={{
+                    fontSize: "11px",
+                    fontWeight: 400,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    background: "none",
+                    border: "none",
+                    padding: 0,
+                    cursor: "pointer",
+                  }}
+                >
+                  <span
+                    className="group-hover:border-neutral-600 transition-colors duration-300"
+                    style={{
+                      borderBottom: "1px solid rgba(0,0,0,0.55)",
+                      paddingBottom: "2px",
+                    }}
+                  >
+                    Read more
+                  </span>
+                  <span className="transition-transform duration-300 group-hover:translate-x-1 text-xs">
+                    →
+                  </span>
+                </button>
+              </motion.div>
 
             </div>
           </div>

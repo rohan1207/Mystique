@@ -9,9 +9,9 @@ const BULLETS = [
 ];
 
 const BENTO_ITEMS = [
-  { image: "/product13.jpg", alt: "Sofa" },
-  { image: "/product9.jpg", alt: "Sofa setting" },
-  { image: "/product10.jpg", alt: "Living room" },
+  { image: "/sofa1.webp", alt: "Sofa" },
+  { image: "/sofa2.webp", alt: "Sofa setting" },
+  { image: "/sofa3.webp", alt: "Living room" },
   { image: "/product12.jpg", alt: "Sectional" },
   { image: "/product1.jpeg", alt: "Detail" },
   { image: "/product4.jpg", alt: "Sofa detail" },
