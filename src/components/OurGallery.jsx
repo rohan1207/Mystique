@@ -40,7 +40,7 @@ export default function OurGallery() {
                 lineHeight: 1.2,
               }}
             >
-              Moments from the studio floor.
+              Moments from Mystique.
             </p>
           </div>
 

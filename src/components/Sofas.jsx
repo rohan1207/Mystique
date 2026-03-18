@@ -23,7 +23,7 @@ export default function Sofas() {
       title="Our Sofas"
       bullets={BULLETS}
       bentoItems={BENTO_ITEMS}
-      textOnLeft={false}
+      textOnLeft={true}
       categorySlug="sofas"
     />
   );
