@@ -292,14 +292,12 @@ const Navbar = () => {
 
             {/* Center: brand */}
             <div className="absolute left-1/2 -translate-x-1/2">
-              <Link
-                to="/"
-                className={`text-[13px] lg:text-[15px] tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  navIsSolid ? "text-neutral-900" : "text-white"
-                }`}
-                style={{ fontWeight: 300 }}
-              >
-                MYSTIQUE.
+              <Link to="/" className="inline-flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="Mystique"
+                  className="h-12 lg:h-28 object-contain"
+                />
               </Link>
             </div>
 

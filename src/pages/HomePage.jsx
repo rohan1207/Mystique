@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../components/HeroSection";
 import EssenceStatement from "../components/EssenceStatement";
 import StudioScrollReveal from "../components/StudioScrollReveal";
+import OurGallery from "../components/OurGallery";
 import WhatWeDo from "../components/WhatWeDo";
 import ShopByCollection from "../components/ShopByCollection";
 import OurProjects from "../components/OurProjects";
@@ -30,6 +31,7 @@ export default function HomePage() {
       <Chairs />
       {/* <Consoles /> */}
       <Sofas />
+      <OurGallery />
       <ClientStory />
     </>
   );

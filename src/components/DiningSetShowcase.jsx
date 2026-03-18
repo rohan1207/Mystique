@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const BULLETS = [
   "Crafted for everyday gatherings and quiet meals alike.",
@@ -29,8 +30,19 @@ export default function DiningSetShowcase() {
       <div className="h-[160vh] relative">
         <div className="sticky top-0 h-screen w-full flex items-stretch overflow-hidden">
           <div className="w-full flex flex-col lg:flex-row gap-0 max-w-[1600px] mx-auto">
-            {/* Left: text – static, no scroll reveal */}
-            <div className="w-full lg:w-[30%] xl:w-[28%] flex flex-col justify-center pl-6 lg:pl-12 xl:pl-20 pr-4 lg:pr-8 py-16 lg:py-0">
+            {/* Left: text – subtle in-view reveal */}
+            <motion.div
+              className="w-full lg:w-[30%] xl:w-[28%] flex flex-col justify-center pl-6 lg:pl-12 xl:pl-20 pr-4 lg:pr-8 py-16 lg:py-0"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 22,
+                mass: 0.9,
+              }}
+            >
               <p
                 style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
                 className="uppercase text-neutral-500 mb-5"
@@ -97,10 +109,21 @@ export default function DiningSetShowcase() {
                   </span>
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Right: bento grid – 3-card premium layout */}
-            <div className="w-full lg:w-[70%] xl:w-[72%] flex flex-col min-h-0 pr-4 lg:pr-8 xl:pr-12 py-6 lg:py-8 lg:h-full">
+            {/* Right: bento grid – 3-card premium layout with soft float */}
+            <motion.div
+              className="w-full lg:w-[70%] xl:w-[72%] flex flex-col min-h-0 pr-4 lg:pr-8 xl:pr-12 py-6 lg:py-8 lg:h-full"
+              initial={{ opacity: 0, y: -60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                type: "spring",
+                stiffness: 130,
+                damping: 20,
+                mass: 1,
+              }}
+            >
               <div className="w-full flex-1 min-h-[70vh] lg:min-h-0 grid grid-cols-2 grid-rows-2 gap-[3px] lg:gap-1.5">
                 {BENTO_ITEMS.slice(0, 3).map((item, i) => (
                   <div
@@ -109,15 +132,17 @@ export default function DiningSetShowcase() {
                       i === 2 ? "col-span-2" : ""
                     }`}
                   >
-                    <img
+                    <motion.img
                       src={item.image}
                       alt={item.alt}
                       className="w-full h-full object-cover object-center"
+                      whileHover={{ scale: 1.03 }}
+                      transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
                     />
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

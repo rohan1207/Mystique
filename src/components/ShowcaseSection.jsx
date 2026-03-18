@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function ShowcaseSection({
   title,
@@ -9,12 +10,21 @@ export default function ShowcaseSection({
   categorySlug = "",
 }) {
   const textBlock = (
-    <div
+    <motion.div
       className={`w-full lg:w-[30%] xl:w-[28%] flex flex-col justify-center py-16 lg:py-0 ${
         textOnLeft
           ? "pl-6 lg:pl-12 xl:pl-20 pr-4 lg:pr-8 order-1"
           : "pl-4 lg:pl-8 pr-6 lg:pr-12 xl:pr-20 order-2"
       }`}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.35 }}
+      transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 22,
+        mass: 0.9,
+      }}
     >
       <p
         style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.22em" }}
@@ -84,16 +94,25 @@ export default function ShowcaseSection({
           </Link>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 
   const imageBlock = (
-    <div
+    <motion.div
       className={`w-full lg:w-[70%] xl:w-[72%] flex flex-col min-h-0 py-6 lg:py-8 lg:h-full ${
         textOnLeft
           ? "pr-4 lg:pr-8 xl:pr-12 order-2"
           : "pl-4 lg:pl-8 xl:pl-12 order-1"
       }`}
+      initial={{ opacity: 0, y: -60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        type: "spring",
+        stiffness: 130,
+        damping: 20,
+        mass: 1,
+      }}
     >
       <div className="w-full flex-1 min-h-[70vh] lg:min-h-0 grid grid-cols-2 grid-rows-2 gap-[3px] lg:gap-1.5">
         {bentoItems.slice(0, 3).map((item, i) => (
@@ -103,15 +122,17 @@ export default function ShowcaseSection({
               i === 2 ? "col-span-2" : ""
             }`}
           >
-            <img
+            <motion.img
               src={item.image}
               alt={item.alt}
               className="w-full h-full object-cover object-center"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
             />
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
